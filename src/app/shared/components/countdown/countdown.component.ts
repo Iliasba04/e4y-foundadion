@@ -30,9 +30,6 @@ export class CountdownComponent implements OnInit, OnDestroy{
   private getTimeDifference(): void {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
     this.converTimes(this.timeDifference);
-    if(this.timeDifference === 0){
-      this.scrollHeight = 0;
-    }
   }
 
   private converTimes(timeDifference: number): void {
