@@ -1,0 +1,58 @@
+.download-button{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    background-color: #F59E21;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+.download-button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    z-index: -1;
+}
+.download-button:hover{
+    color: #F59E21;
+}
+.download-button:hover::before{
+    transform: translateX(0);
+}
+.active{
+    font-weight: 700 !important;
+}
+.active.nav-link::before{
+    transform: scale(1);
+}
+.nav-link{
+    padding-bottom: 5px;
+    position: relative;
+    transition: all 0.5s;
+}
+.nav-link::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F59E21;
+    transform: scale(0);
+    transform-origin: center;
+    transition: all 0.5s;
+} 
+.nav-link:hover{
+    color: #F59E21 !important;
+}
+.nav-link:hover::before{
+    transform: scale(1);
+}
