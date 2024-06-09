@@ -1,0 +1,44 @@
+<nav class="w-full px-10 lg:px-40 py-5 bg-[#1E1E1E] shadow md:flex md:items-center md:justify-between fixed z-999">
+    <div class="flex items-center justify-between">
+        <span>
+            <img class="h-[40px] inline" src="assets/images/logo-E4Y.png" alt="company logo">
+        </span>
+        <span class="text-white text-3xl cursor-pointer md:hidden block" (click)="toggle()">
+            @if (!toggled()) {
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>  
+            }@else {
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            }    
+        </span>
+    </div> 
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute
+        bg-[#1E1E1E] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0
+         top-[-400px] transition-all ease-in-out duration-500"
+         [ngClass]="{'opacity-100 top-[80px]' : toggled() , }">
+        <li class="mx-4 my-6 md:my-0">
+            <a [routerLink]="['/']" fragment="hero" class="text-xl text-white font-normal nav-link" [class.active]="currentSection === '/' || currentSection ==='hero'">Accueil</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a [routerLink]="['/']" fragment="about" class="text-xl text-white font-normal nav-link" [class.active]="currentSection === 'about'">À propos</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a [routerLink]="['/']" fragment="services" class="text-xl text-white font-normal nav-link" [class.active]="currentSection === 'services'">Services</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl text-white font-normal nav-link">FAQ</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a [routerLink]="['/']" fragment="contact" class="text-xl text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>
+        </li>
+        <div class="w-fit bg-yellowColor text-white px-10 py-2 mx-4 hidden md:block" 
+        [ngClass]="{'md:hidden': scrollHeight > 1000}">
+          <span class="text-xl font-bold">LANCEMENT DU SITE WEB</span>
+        </div>
+    </ul>
+</nav>
+  
+ 
