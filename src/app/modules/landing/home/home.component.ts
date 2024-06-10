@@ -5,11 +5,12 @@ import { Subscription, interval } from 'rxjs';
 import { CountdownComponent } from '../../../shared/components/countdown/countdown.component';
 import { FooterComponent } from '../../../shared/components/footer/footer.component';
 import { ActivatedRoute } from '@angular/router';
+import { PricePipe } from '../../../shared/pipes/price.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent ,CountdownComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent ,CountdownComponent, PricePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -30,7 +31,7 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
     this.activeRoute.fragment.subscribe( (value)=>{
       this.jumpToSection(value);
     }) 
-    this.subscription =  interval(5).subscribe( x => {
+    this.subscription =  interval(0.5).subscribe( x => {
       this.increaseCount();
       this.increaseEmployCount();
       this.increasePersonCount();
@@ -50,7 +51,7 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
   }
 
   private increasePersonCount() : void {
-    if(this.personsCount() < 90000){
+    if(this.personsCount() < 490584){
       this.personsCount.update( v => v +1);
     }else{
       this.subscription.unsubscribe();
@@ -69,13 +70,7 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
     } else {
       this.showScrollToTopButton.set(false);
     }
-
-    /**if(number >= 2000){
-      //console.log(number);
-      this.subscription =  interval(1000).subscribe( x => {
-        this.increaseCount();
-      })
-    }*/
+    this.animateHeader(this.scrollHeight())
   }
 
   // Navigate to selected section
@@ -96,7 +91,23 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
       }
     )
   }
-  
+
+  animateHeader(height:number){
+    if(height >=820 && height <= 1989){
+
+      this.section = 'about';
+
+    }else if(height >= 1990 && height <=3000){
+
+      this.section = 'services'
+
+    }else if(height >= 4300 ){
+      this.section = 'contact'
+    }else{
+
+      this.section = 'hero';
+    }
+  }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

@@ -1,4 +1,4 @@
-<nav class="w-full px-10 lg:px-40 py-5 bg-[#1E1E1E] shadow md:flex md:items-center md:justify-between fixed z-999">
+<nav class="w-full px-10 lg:px-40 py-5 bg-[#1E1E1E] shadow md:flex md:items-center md:justify-between fixed z-999 font-roboto_condensed">
     <div class="flex items-center justify-between">
         <span>
             <img class="h-[40px] inline" src="assets/images/logo-E4Y.png" alt="company logo">
@@ -34,8 +34,8 @@
         <li class="mx-4 my-6 md:my-0">
           <a [routerLink]="['/']" fragment="contact" class="text-xl text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>
         </li>
-        <div class="w-fit bg-yellowColor text-white px-10 py-2 mx-4 hidden md:block" 
-        [ngClass]="{'md:hidden': scrollHeight > 1000}">
+        <div class="w-fit bg-yellowColor text-white px-10 py-2 mx-4 hidden" 
+        [ngClass]="{'md:hidden': scrollHeight > 800, 'md:block' : scrollHeight < 800}">
           <span class="text-xl font-bold">LANCEMENT DU SITE WEB</span>
         </div>
     </ul>

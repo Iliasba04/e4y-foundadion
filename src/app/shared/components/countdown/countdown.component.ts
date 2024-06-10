@@ -12,7 +12,7 @@ import { Subscription, interval } from 'rxjs';
 export class CountdownComponent implements OnInit, OnDestroy{
   private subscription!: Subscription;
   public dateNow = new Date();
-  public dDay = new Date('2024-12-31T00:00:00');
+  public dDay = new Date('2024-06-31T00:00:00');
   public timeDifference: number = 0;
   public days = signal<number>(0);
   public hours = signal<number>(0);
@@ -30,6 +30,9 @@ export class CountdownComponent implements OnInit, OnDestroy{
   private getTimeDifference(): void {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
     this.converTimes(this.timeDifference);
+    if(this.timeDifference === 0){
+      this.scrollHeight = 0;
+    }
   }
 
   private converTimes(timeDifference: number): void {
