@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent{
+  
   @Input({required : true}) currentSection : string = "";
   @Input({required:true}) scrollHeight : number = 0;
   
@@ -17,6 +18,6 @@ export class HeaderComponent {
 
   toggle(){
     this.toggled.update( v => v = !v);
-  } 
+  }
 }
  
