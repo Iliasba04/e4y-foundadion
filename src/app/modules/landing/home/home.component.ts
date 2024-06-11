@@ -73,7 +73,7 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
     } else {
       this.showScrollToTopButton.set(false);
     }
-    this.animateHeader(this.scrollHeight())
+    //this.animateHeader(this.scrollHeight())
   }
 
   // Navigate to selected section
@@ -96,15 +96,15 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
   }
 
   animateHeader(height:number){
-    if(height >=820 && height <= 1989){
+    if(height >=850 && height <= 2089){
 
       this.section = 'about';
 
-    }else if(height >= 1990 && height <=3000){
+    }else if(height >= 2090 && height <=3500){
 
       this.section = 'services'
 
-    }else if(height >= 4300 ){
+    }else if(height >= 4400 ){
       this.section = 'contact'
     }else{
 
