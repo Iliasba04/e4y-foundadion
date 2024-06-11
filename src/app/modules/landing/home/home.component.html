@@ -3,26 +3,31 @@
     <!-- Page content-->
     <div class="w-full relative -z-10 md:z-auto">
         <!-- HERO SECTION -->
-        <section class="w-full min-h-screen bg-hero-pattern bg-no-repeat bg-cover" id="hero">
-            <div class="w-full min-h-[90.4vh] px-2 sm:px-15 lg:px-40 flex flex-col justify-between">
-                <!-- COUNTDOWN-->
+        <section class="w-full min-h-screen bg-hero-background bg-no-repeat bg-cover" id="hero">
+            <div class="w-full min-h-[95dvh] px-5 lg:px-10 xl:px-20 flex flex-col justify-center md:justify-end">
+                <!-- COUNTDOWN -->
+                <div class="w-full flex flex-col items-center mb-5 md:hidden">
+                    <div class="w-fit bg-yellowColor text-white px-10 py-2">
+                        <span class="text-base font-bold">LANCEMENT DU SITE WEB</span>
+                    </div>
                     <app-countdown [scrollHeight]="scrollHeight()"/>
+                </div>
                 <!-- TEXT -->
-                <div class="flex flex-col justify-center items-center md:items-start font-roboto_condensed mb-40">
-                    <p class="text-white text-4xl leading-10 font-normal text-center mt-5 md:mt-0 sm:text-left md:text-6xl md:leading-[55.2px]">DÉVELOPPER<br> 
-                        l’<span class="font-semibold">ENTREPRENARIAT</span>, L’EMPLOI<br>
+                <div class="flex flex-col justify-center items-center md:items-start font-roboto_condensed">
+                    <p class="text-white text-2xl leading-10 font-normal text-center mt-5 md:mt-0 sm:text-left md:text-4xl lg:text-6xl md:leading-[55.2px]">DÉVELOPPER<br> 
+                        L’<span class="font-semibold">ENTREPRENARIAT</span>, L’EMPLOI<br>
                         ET L’<span class="font-semibold">AUTONOMISATION</span> <br>
                         ÉCONOMIQUE DES <span class="font-semibold">JEUNES</span>
                     </p>
 
                     <div class="flex items-center space-y-5 flex-col sm:flex-row sm:space-y-0 sm:space-x-5 mt-6">
-                        <button class="flex items-center justify-center px-8 py-4 bg-white text-[#1D2130] rounded
+                        <button class="flex items-center justify-center px-6 py-3 bg-white text-[#1D2130] rounded
                          hover:bg-yellowColor hover:text-white duration-500">
-                            <span class="text-lg font-medium">JE M'INSCRIS</span>
+                            <span class="text-base font-medium">JE M'INSCRIS</span>
                         </button>
-                        <button class="flex justify-center items-center px-8 py-4 bg-transparent border border-gray-100 rounded
+                        <button class="flex justify-center items-center px-6 py-3 bg-transparent border border-gray-100 rounded
                          hover:bg-yellowColor hover:border-yellowColor duration-500">
-                            <span class="text-lg text-white font-medium">EN SAVOIR</span>
+                            <span class="text-base text-white font-medium">EN SAVOIR</span>
                             <span class="text-xs text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -36,14 +41,14 @@
         <!-- PROGRAMME SECTION -->
         <section class="w-full min-h-screen font-roboto_condensed" id="about">
             <div class="w-full min-h-screen">
-                <div class="w-full min-h-[90dvh] bg-cow-pattern bg-cover bg-no-repeat bg-center md:bg-opacity-100 px-5 lg:px-40 relative">
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-18 py-15 bg-gray-300 bg-opacity-60 md:bg-transparent md:bg-opacity-100 px-1">
+                <div class="w-full min-h-[90dvh] bg-cow-pattern bg-cover bg-no-repeat bg-center md:bg-opacity-100 px-5 lg:px-10 xl:px-20 relative">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-18 py-5 lg:py-15 bg-gray-300 bg-opacity-60 md:bg-transparent md:bg-opacity-100 px-1">
                         <div class="sm:col-span-2">
                             <div class="flex items-center space-x-4 mb-5">
                                 <span class="block w-22 h-[2px] bg-[#1D2130]"></span>
-                                <span class="text-2xl font-bold leading-6 tracking-[2px]">LE PROGRAMME</span>
+                                <span class="text-xl lg:text-2xl font-bold leading-6 tracking-[2px]">LE PROGRAMME</span>
                             </div>
-                            <p class="text-[19px] text-justify text-[#1D2130] md:text-[#525560] leading-[30.4px] font-normal md:w-4/5">
+                            <p class="text-lg lg:text-xl text-justify text-[#1D2130] md:text-[#525560] leading-[30.4px] font-normal lg:w-4/5">
                                 <span class="font-bold">E4Y «Développement de l’Entrepreneuriat, Accès à l’emploi et Autonomisation
                                     économique des Jeunes en particulier les Jeunes Femmes », </span>
                                 est un Programme visant à transformer le paysage économique des pays de la zone (UEMOA) notamment le <span class="font-bold">Sénégal</span>,
@@ -52,7 +57,7 @@
                                 adjacents ainsi que les Groupements à fort potentiel.
                             </p>
 
-                            <p class="text-[19px] text-justify text-[#1D2130] leading-[30.4px] font-normal mt-5 md:w-4/5">
+                            <p class="text-lg lg:text-xl text-justify text-[#1D2130] leading-[30.4px] font-normal mt-5 lg:w-4/5">
                                 Avec un focus Jeune, notamment Jeunes Femmes, E4Y se concentre sur l'épanouissement de leur capacités entrepreneuriale et 
                                 l'amélioration de leur compétitivité sur le marché.
                             </p>
@@ -64,10 +69,11 @@
                     </div>
 
                 </div>
-                <div class="bg-[#E8620F] px-5 lg:px-40">
+                <div class="bg-[#E8620F] px-5 lg:px-10 xl:px-20">
                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                        <div class="relative pt-5 sm:pt-0">
-                            <img class="w-full h-72 object-cover rounded-xl sm:rounded-none sm:h-auto sm:w-auto sm:object-none sm:absolute sm:bottom-0" src="../../../../assets/images/women.png" alt="women">
+                        <div class="h-full relative pt-5 sm:pt-0">
+                            <img class="w-full h-72 object-cover rounded-xl sm:rounded-none sm:h-120 sm:w-auto sm:absolute top-0 bottom-0 m-auto" 
+                            src="../../../../assets/images/women.png" alt="women">
                         </div>
                         <div class="py-15">
                             <div class="flex items-center space-x-4 mb-5">
@@ -81,8 +87,8 @@
                                             <img class="w-4 h-4" src="../../../../assets/icons/Vector.svg" alt=""building>
                                         </span>
                                     </div>
-                                    <p class="text-white font-normal leading-8 text-justify text-2xl">
-                                        <span class="font-bold leading-6 text-3xl">Créer de l’Impact</span><br>
+                                    <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
+                                        <span class="font-bold leading-6 text-xl lg:text-3xl">Créer de l’Impact</span><br>
                                         Contribuer à libérer le potentiel des PME évoluant dans l’industrie agroalimentaire et les secteurs connexes.
                                     </p>
                                 </div>
@@ -93,8 +99,8 @@
                                             <img class="w-4 h-4" src="../../../../assets/icons/flower.svg" alt=""building>
                                         </span>
                                     </div>
-                                    <p class="text-white font-normal leading-8 text-justify text-2xl">
-                                        <span class="font-bold leading-6 text-3xl">Croître et Innover</span><br>
+                                    <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
+                                        <span class="font-bold leading-6 text-xl lg:text-3xl">Croître et Innover</span><br>
                                         Appui à la création d’emplois dignes et valorisants avec un accent particulier sur l’inclusion des Jeunes et des Femmes.
                                     </p>
                                 </div>
@@ -107,17 +113,17 @@
 
         <!-- CIBLE SECTION -->
         <section class="w-full font-roboto_condensed" id="services">
-            <div class="w-full flex flex-col px-5 lg:px-40 py-15 bg-white">
+            <div class="w-full flex flex-col px-5 lg:px-10 xl:px-20 py-20 bg-white mt-5">
                 <div class="flex items-center space-x-4 mb-5">
                     <span class="block w-22 h-[2px] bg-[#1D2130]"></span>
                     <span class="text-2xl font-bold leading-6 tracking-[2px] text-[#1D2130]">CIBLES</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-8 sm:gap-5 lg:gap-30">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 sm:gap-5 lg:gap-30">
                     <div class="flex flex-col justify-start items-center p-2 group relative card-section">
                         <div class="w-full rounded-[20px] mb-5">
                             <img class="w-full object-cover" src="../../../../assets/images/tracteur.png" alt="tracteur">
                         </div>
-                        <p class="text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-xl lg:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                          group-hover:text-white group-hover:z-80 duration-500">
                             PME évoluant en milieu rural ou ayant un impact notable sur les <span class="font-bold">communautés</span> les moins desservies.
                         </p>
@@ -126,28 +132,28 @@
                         <div class="w-full rounded-[20px] mb-5">
                             <img class="w-full object-cover" src="../../../../assets/images/biere.png" alt="beer">
                         </div>
-                        <p class="text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-xl lg:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                          group-hover:text-white group-hover:z-80 duration-500">
                             PME et Groupements actifs dans l’<span class="font-bold">industrie agroalimentaire</span> et les <span class="font-bold">secteurs connexes</span>.
                         </p>
                     </div>
-                    <div class="flex flex-col justify-start items-center p-2 group relative card-section">
+                    <div class="flex flex-col justify-start items-center p-2 group relative card-section sm:col-span-2 md:col-span-1">
                         <div class="w-full rounded-[20px] mb-5">
-                            <img class="w-full object-cover" src="../../../../assets/images/couturier.png" alt="couturier">
+                            <img class="w-full object-cover sm:h-80 sm:rounded-[20px] md:rounded-none md:h-full" src="../../../../assets/images/girls.png" alt="couturier">
                         </div>
-                        <p class="text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-xl lg:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                         group-hover:text-white group-hover:z-80 duration-500">
                             Jeunes et Femmes présentant un potentiel élevé, y compris celles en <span class="font-bold">situation de handicap</span> ou <span class="font-bold">réfugiées</span>.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="w-full px-5 lg:px-40 py-20 bg-[#1E1E1E]">
+            <div class="w-full px-5 lg:px-10 xl:px-20 py-20 bg-[#1E1E1E]">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="flex justify-start items-center">
                         <div class="flex items-center space-x-4 mb-5">
                             <span class="block w-22 h-[2px] bg-white"></span>
-                            <span class="text-2xl font-bold leading-6 tracking-[2px] text-white">CRITÈRES DE SÉLECTION</span>
+                            <span class="text-xl lg:text-2xl font-bold leading-6 tracking-[2px] text-white">CRITÈRES DE SÉLECTION</span>
                         </div>
                     </div>
                     <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -157,7 +163,7 @@
                                     <img class="w-3 h-3" src="../../../../assets/icons/pme-icon.png" alt=""building>
                                 </span>
                             </div>
-                            <p class="text-white font-normal leading-8 text-justify text-2xl">
+                            <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
                                 PME agroalimentaire ou groupement agricole basé en Côte d’Ivoire, au Sénégal, au Togo ou au Bénin.
                             </p>
                         </div>
@@ -167,7 +173,7 @@
                                     <img class="w-3 h-3" src="../../../../assets/icons/wave.png" alt="wave">
                                 </span>
                             </div>
-                            <p class="text-white font-normal leading-8 text-justify text-2xl">
+                            <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
                                 Chiffre d’affaires annuel compris entre <span class="font-bold">12 millions</span> et
                                 <span class="font-bold">1 milliard de FCFA.</span>
                             </p>
@@ -178,7 +184,7 @@
                                     <img class="w-3 h-3" src="../../../../assets/icons/potential.svg" alt="potential">
                                 </span>
                             </div>
-                            <p class="text-white font-normal leading-8 text-justify text-2xl">
+                            <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
                                 Fort potentiel de croissance et de création d’emplois.
                             </p>
                         </div>
@@ -188,7 +194,7 @@
                                     <img class="w-3 h-3" src="../../../../assets/icons/flower-1.png" alt="flower">
                                 </span>
                             </div>
-                            <p class="text-white font-normal leading-8 text-justify text-2xl">
+                            <p class="text-white font-normal leading-8 text-justify text-lg lg:text-2xl">
                                 Focus entreprises dirigées ou possédées par des Jeunes, notamment Jeune femmes entre <span class="font-bold">18</span> et
                                  <span class="font-bold">35</span> ans.
                             </p>
@@ -199,7 +205,7 @@
         </section>
          <!-- RESULTS SECTION -->
          <section class="w-full font-roboto_condensed">
-            <div class="w-full flex flex-col px-5 lg:px-40 py-20 bg-[#DEE2ED]">
+            <div class="w-full flex flex-col px-5 lg:px-10 xl:px-20 py-20 bg-[#DEE2ED]">
                 <div class="flex items-center space-x-4 mb-10">
                     <span class="block w-22 h-[2px] bg-[#1E1E1E]"></span>
                     <span class="text-2xl font-bold leading-6 tracking-[2px] text-[#1E1E1E]">RÉSULTATS ATTENDUS</span>
@@ -207,21 +213,21 @@
 
                 <div class="grid grid-cols-1 gap-y-5 sm:gap-y-0 sm:grid-cols-3 sm:gap-x-5 md:gap-x-20 mb-15">
                     <div class="flex flex-col justify-start items-center">
-                        <span class="text-center text-orangeColor text-6xl font-bold leading-[64px]">{{companyCount() | price}}</span>
-                        <p class="text-center text-[#1E1E1E] text-[22px] font-normal leading-[35.2px]">
+                        <span class="text-center text-orangeColor text-3xl lg:text-6xl font-bold leading-[64px]">{{companyCount() | price}}</span>
+                        <p class="text-center text-[#1E1E1E] text-xl lg:text-[22px] font-normal leading-[35.2px]">
                             PME et Groupements <br>
                             accompagnés</p>
                     </div>
                     <div class="flex flex-col justify-start items-center">
-                        <span class="text-center text-orangeColor text-6xl font-bold leading-[64px]">{{employeeCount() | price}}</span>
-                        <p class="text-center text-[#1E1E1E] text-[22px] font-normal leading-[35.2px]">
+                        <span class="text-center text-orangeColor text-3xl lg:text-6xl font-bold leading-[64px]">{{employeeCount() | price}}</span>
+                        <p class="text-center text-[#1E1E1E] text-xl lg:text-[22px] font-normal leading-[35.2px]">
                             emplois directs <br>
-                            et indirects, créés, <br>
+                            et indirects, créés, <br> 
                             consolidés ou maintenus.</p>
                     </div>
                     <div class="flex flex-col justify-start items-center">
-                        <span class="text-center text-orangeColor text-6xl font-bold leading-[64px]">{{personsCount() | price}}</span>
-                        <p class="text-center text-[#1E1E1E] text-[22px] font-normal leading-[35.2px]">
+                        <span class="text-center text-orangeColor text-3xl lg:text-6xl font-bold leading-[64px]">{{personsCount() | price}}</span>
+                        <p class="text-center text-[#1E1E1E] text-xl lg:text-[22px] font-normal leading-[35.2px]">
                             personnes impactées <br>
                             qui disposeront d'un revenu <br>
                             soutenu via le Programme</p>
@@ -232,19 +238,19 @@
          </section>
           <!-- RESULTS SECTION -->
           <section class="w-full font-roboto_condensed">
-            <div class="w-full flex flex-col px-5 lg:px-40 py-20 gradient-bg">
+            <div class="w-full flex flex-col px-5 lg:px-10 xl:px-20 py-20 gradient-bg">
 
-                <div class="flex items-center space-x-4 mb-10 md: ml-20">
+                <div class="flex items-center space-x-4 mb-10 md: ml-10">
                     <span class="block w-22 h-[2px] bg-[#1E1E1E]"></span>
                     <span class="text-2xl font-bold leading-6 tracking-[2px] text-[#1E1E1E]">LE CONSORTIUM</span>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-x-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-x-10">
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow transition-all
                     duration-500">
                         <span class="text-lg text-[#1D2130] text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AU FINANCEMENT</span>
-                        <h3 class="text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Teranga Gestion</h3>
-                        <p class="text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
+                        <h3 class="text-xl lg:text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Teranga Gestion</h3>
+                        <p class="text-base lg:text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
                             Teranga Gestion (TG) est une société de gestion de fonds d’impact établie au Sénégal depuis 2016.
                             Sa mission est de favoriser l'<span class="font-bold">accès au financement</span> des micro, petites et moyennes entreprises (PME) africaines,
                             en améliorant leurs performances et leurs impacts économiques et sociaux. Teranga Gestion collabore 
@@ -257,9 +263,9 @@
 
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow">
                         <span class="text-lg text-[#1D2130] text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AU COMPETENCES</span>
-                        <h3 class="text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Entrepreneurial Solutions <br>
+                        <h3 class="text-xl lg:text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Entrepreneurial Solutions <br>
                             Partners</h3>
-                        <p class="text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
+                        <p class="text-base lg:text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
                             Entrepreneurial Solutions Partners (ESP), une société de conseil et d'<span class="font-bold">investissement stratégique</span> implantée à Abidjan et à Kigali,
                             fournit les éléments clés d'une réussite durable aux entrepreneurs africains grâce à son concept de <span class="font-bold">Capital Intelligent</span>.
                             ESP soutient les entrepreneurs en leur offrant des programmes de formation qui couvrant un large éventail de compétences managériales,
@@ -271,8 +277,8 @@
 
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow">
                         <span class="text-lg text-[#1D2130] text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCES AUX MARCHES</span>
-                        <h3 class="text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Club Tiossane</h3>
-                        <p class="text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
+                        <h3 class="text-xl lg:text-3xl text-[#E8620F] text-center leading-[42px] font-bold mb-3">Club Tiossane</h3>
+                        <p class="text-base lg:text-xl text-[#1D2130] text-justify leading-[30.4px] font-normal">
                             Club Tiossane, basé à Dakar, Sénégal, est un distributeur multicanal de produits agroalimentaires. Son objectif principal
                             est de faciliter l'accès au marché pour les PME et les jeunes entrepreneurs en identifiant les <span class="font-bold">canaux de distribution</span> adaptés
                             à leurs produits.

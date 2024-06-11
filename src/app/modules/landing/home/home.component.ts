@@ -25,13 +25,13 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
   private activeRoute : ActivatedRoute = inject(ActivatedRoute);
   section : string = '/';
   scrollHeight = signal(0);
+  count: number = 0;
 
   ngOnInit(): void {
-
     this.activeRoute.fragment.subscribe( (value)=>{
       this.jumpToSection(value);
     }) 
-    this.subscription =  interval(0.5).subscribe( x => {
+    this.subscription =  interval(0.0005).subscribe( x => {
       this.increaseCount();
       this.increaseEmployCount();
       this.increasePersonCount();
@@ -43,17 +43,20 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
       this.companyCount.update( v => v +1);
     }
   }
-
+ 
   private increaseEmployCount() : void {
-    if(this.employeeCount() < 70000){
+    if(this.employeeCount() < 1000){
       this.employeeCount.update( v => v +1);
+    }else{
+      this.employeeCount.set(70000);
     }
   }
 
   private increasePersonCount() : void {
-    if(this.personsCount() < 490584){
+    if(this.personsCount() < 1000){
       this.personsCount.update( v => v +1);
     }else{
+      this.personsCount.set(490584)
       this.subscription.unsubscribe();
     }
   }
@@ -78,6 +81,8 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
     if(!section){
         return
     }
+    console.log(section);
+    
     this.section = section;
     document.getElementById(section)?.scrollIntoView({behavior:'smooth'});
   }

@@ -19,7 +19,7 @@ export class CountdownComponent implements OnInit, OnDestroy{
   public minutes = signal<number>(0);
   public seconds = signal<number>(0);
 
-  @Input({required:true}) scrollHeight : number = 0;
+  @Input() scrollHeight : number = 0;
 
   ngOnInit(): void {
     this.subscription = interval(1000).subscribe(x => {
