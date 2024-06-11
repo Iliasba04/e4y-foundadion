@@ -1,0 +1,372 @@
+<div class="w-full flex flex-col relative bg-white">
+    <app-header [currentSection]="section" [scrollHeight]="scrollHeight()"></app-header>  
+    <div class="w-full min-h-screen flex flex-col lg:items-center pt-40 pb-20 px-5 md:px-20 lg:px-0">
+        <div class="flex flex-col mb-5">
+            <h2 class="text-[#232323] text-center text-3xl sm:text-4xl lg:text-8xl leading-[81px] font-bold font-sans">
+                Foire Aux <span class="text-gradient">Questions</span>
+            </h2>
+
+            <p class="text-xl lg:text-2xl text-center text-[#626262] font-sans font-normal leading-7">
+                Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+        <div class="lg:w-3/5 bg-[#F8F8F8] rounded-[11px] px-10 pb-4 transition-all duration-500">
+
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Qu'est-ce que le Programme E4Y ?</span>
+                    <button (click)="toggleFaq(svg_icon1,'first')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon1  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="first">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Le Programme E4Y est une initiative visant à stimuler l'entrepreneuriat et à booster l'emploi et l'autonomisation économique des jeunes, 
+                        notamment des jeunes femmes au Sénégal, en Côte d’ivoire, au Bénin et au Togo.
+                        Nous soutenons les PME dans les secteurs de l'agribusiness et de l'agro-industrie pour accélérer
+                        leur croissance et augmenter leur compétitivité.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Qui peut participer au Programme ?</span>
+                    <button (click)="toggleFaq(svg_icon2,'second')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon2 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>   
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="second">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Le programme est ouvert aux petites et moyennes entreprises, ainsi qu’aux 
+                        groupements qui opèrent dans les secteurs de l'agribusiness, de l'agro-industrie, 
+                        et des secteurs connexes. Les entreprises doivent démontrer un potentiel de 
+                        croissance et un engagement envers le développement économique et social de 
+                        leur communauté.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-black text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Quels types de soutien le Programme offre-t-il ?</span>
+                    <button (click)="toggleFaq(svg_icon3,'third')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon3 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>   
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="third">
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-black text-base md:text-xl font-semibold leading-[24.2px] font-sans">Accès au Financement :</h3>
+                        <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-2">
+                            Le programme est ouvert aux petites et moyennes entreprises, ainsi qu’aux 
+                            groupements qui opèrent dans les secteurs de l'agribusiness, de l'agro-industrie, 
+                            et des secteurs connexes. Les entreprises doivent démontrer un potentiel de 
+                            croissance et un engagement envers le développement économique et social de 
+                            leur communauté.
+                        </p>
+                    </div>
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-black text-xl font-semibold leading-[24.2px] font-sans">Accès aux compétences :</h3>
+                        <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-2">
+                            Nous proposons des formations de six à neuf mois selon trois approches:
+                        </p>
+                        <ul class="pl-5 mt-2 flex flex-col space-y-4">
+                            <li class="flex items-baseline space-x-2">
+                                <div>
+                                    <span class="block w-2 h-2 rounded-full bg-black"></span>
+                                </div>
+                                <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px]">
+                                    <span class="text-black font-semibold">Services directs :</span> Des produits conçus spécifiquement par notre équipe pour répondre aux exigences du marché et aux besoins spécifiques de chaque entreprise
+                                </p>
+                            </li> 
+                            <li class="flex items-baseline space-x-2">
+                                <div>
+                                    <span class="block w-2 h-2 rounded-full bg-black"></span>
+                                </div>
+                                <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px]">
+                                    <span class="text-black font-semibold">Accès à des experts :</span> 
+                                    Nous connectons les entreprises avec des experts hautement qualifiés, soigneusement sélectionnés pour répondre à des besoins précis, augmentant ainsi l'efficacité et la compétitivité.
+                                </p>
+                            </li> 
+                            <li class="flex items-baseline space-x-2">
+                                <div>
+                                    <span class="block w-2 h-2 rounded-full bg-black"></span>
+                                </div>
+                                <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px]">
+                                    <span class="text-black font-semibold">Centre de Services Partagés :</span>
+                                    Ce centre est chargé de négocier des contrats avantageux pour nos membres, facilitant un accès économique à 
+                                    des services cruciaux comme le transport et la chaîne de froid, essentiels pour maintenir la qualité et la viabilité des produits.
+                                </p>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-black text-xl font-semibold leading-[24.2px] font-sans">Accès aux Marchés :</h3>
+                        <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-2">
+                            Nous proposons une suite complète de services conçus pour augmenter le chiffre d'affaires de votre entreprise par une 
+                            amélioration de votre stratégie de distribution. D’abord, nous identifions les canaux de distribution appropriés à vos produits,
+                            puis nous fournissons des services adaptés à vos produits sur les canaux de distribution identifiés. Ces services englobent
+                            la distribution physique, le soutien au référencement, la négociation des conditions de vente, ainsi que le financement et
+                            la coordination de campagnes de lancement de produits, de trade marketing et de communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Qui sommes- nous ?</span>
+                    <button (click)="toggleFaq(svg_icon4,'four')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon4 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>   
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="four">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        En collaboration avec Teranga Gestion, Entrepreneurial Solutions Partners et
+                        Club Tiossane, nous souhaitons stimuler la création d'emplois de qualité, mais
+                        aussi engendrer des transformations structurelles bénéfiques pour la croissance et
+                        la pérennité des Petites et Moyennes Entreprises (PME) dans l'industrie
+                        agroalimentaire et les secteurs connexes.
+                    </p>
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-[#5E5E5E] text-xl font-medium leading-[24.2px] font-sans underline">TERANGA GESTION : VOLET ACCÈS AU FINANCEMENT</h3>
+                        <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                            Teranga Gestion est une société de gestion de fonds d’impact établie au Sénégal depuis 2016, dont la mission est de favoriser
+                            l’accès au financement des micros, petites et moyennes entreprises africaines afin d’améliorer leurs performances
+                            et leurs impacts économiques et sociaux, depuis leur phase de création jusqu’à leur développement. 
+                        </p>
+                    </div>
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-[#5E5E5E] text-xl font-medium leading-[24.2px] font-sans underline">ENTREPREUNARIAL SOLUTIONS PARTNERS : VOLET ACCÈS AUX COMPÉTENCES</h3>
+                        <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                            Entrepreneurial Solutions Partners (ESP) est une firme de conseil stratégique engagée dans l'accélération de la prospérité en Afrique.
+                            Elle offre une expertise en développement du secteur privé avec des services allant de la recherche et du conseil stratégique 
+                            au soutien des entrepreneurs dans toutes les phases de leur croissance. Site web:<a class="text-blue-400 underline" href="https://espartners.co/">https://espartners.co/</a>
+                        </p>
+                    </div>
+                    <div class="flex flex-col mt-3">
+                        <h3 class="text-[#5E5E5E] text-xl font-medium leading-[24.2px] font-sans underline">CLUB TIOSSANE : VOLET ACCÈS AUX MARCHÉS</h3>
+                        <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                            Club Tiossane (CT) est un distributeur multicanal de produits agro-alimentaires basé à Dakar, Sénégal. Créé en 2019, Club Tiossane
+                            a pour mission d’accompagner les producteurs et les marques à accéder à leurs clients et à booster leurs ventes en facilitant
+                            le référencement, le stockage, la distribution et la promotion de leurs produits Site web: <a class="text-blue-400 underline" href="https://www.clubtiossane.sn">https://espartners.co/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Comment le Programme est-il financé ?</span>
+                    <button (click)="toggleFaq(svg_icon5,'five')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon5  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="five">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        En partenariat avec des institutions financières (Fonds d’investissement, Banque, Institution de micro finance) engagées
+                        dans le soutien à l'entrepreneuriat et au développement économique. Nous nous engageons à faciliter l’obtention de prêts
+                        pour les Participants avec des conditions améliorées: taux d’intérêts préférentiels, réduction du temps de traitement des
+                        dossiers et des exigences de garantie assouplies.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Comment puis-je postuler pour participer au Programme ?</span>
+                    <button (click)="toggleFaq(svg_icon6,'six')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon6  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="six">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Vous pouvez postuler en visitant notre site web où vous trouverez le formulaire de candidature et plus de détails sur le processus. 
+                        Vous pouvez également nous contacter directement à notre bureau pour obtenir de l'aide et des informations supplémentaires.
+                    </p>
+                    <p><span class="font-bold text-black">Adresse mail : </span><span class="text-blue-500">{{email}}</span> </p>
+                    <p><span class="font-bold text-black">Numéro : </span>33 825 69 99</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Y a-t-il des frais de participation ?</span>
+                    <button (click)="toggleFaq(svg_icon7,'seven')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon7  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="seven">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        La participation au programme offre plusieurs niveaux de soutien, chacun adapté aux besoins spécifiques de votre entreprise.
+                        Pour l'accès aux marchés et aux compétences, le programme est totalement gratuit, vous permettant de bénéficier
+                        de ces ressources sans coûts supplémentaires.
+                    </p>
+                    <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        En ce qui concerne le financement, nous proposons des prêts à taux préférentiel et avec des garanties allégées.
+                        Un apport minimal du promoteur est requis, les détails de cet apport seront discutés en amont avec le partenaire
+                        pour s'assurer qu'ils correspondent aux capacités et aux besoins de votre entreprise.
+                    </p>
+                    <p class="text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Cette structuration est conçue pour faciliter l'accès à des ressources précieuses tout en soutenant la croissance durable de votre entreprise.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Quel est le processus de sélection des entreprises ?</span>
+                    <button (click)="toggleFaq(svg_icon8,'eight')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon8  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="eight">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Les entreprises sont sélectionnées sur la base de leur potentiel de croissance, de leur impact économique et social,
+                        et de leur alignement avec les objectifs du programme. Le processus inclut une évaluation initiale, des entretiens,
+                        éventuellement une visite sur site et un examen détaillé de votre plan d'affaires et de vos besoins. 
+                        Un accent particulier est mis sur le soutien aux entreprises dirigées par des jeunes femmes ou qui emploient
+                        un nombre significatif de femmes, dans le cadre de notre engagement à promouvoir l'égalité des genres et à renforcer
+                        l'autonomisation économique de celles-ci.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Quelles sont les attentes du Programme envers les entreprises participantes ?</span>
+                    <button (click)="toggleFaq(svg_icon9,'nine')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon9 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="nine">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Nous souhaitons que les entreprises participantes s'engagent activement dans le programme, participent aux formations, 
+                        et appliquent les stratégies et les connaissances acquises pour stimuler leur croissance. Un suivi régulier et des rapports 
+                        de progrès sont également requis pour évaluer l'efficacité du soutien fourni.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Comment le succès du Programme est-il mesuré ?</span>
+                    <button (click)="toggleFaq(svg_icon10,'ten')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon10  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="ten">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Le succès du programme est mesuré par l'amélioration des performances des entreprises participantes, la création et l’amélioration d'emplois,
+                        l'expansion sur de nouveaux marchés, et l'augmentation de la durabilité des entreprises. Des évaluations périodiques
+                        et des rapports de progression sont utilisés pour suivre ces indicateurs.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Quelle est la durée de l’accompagnement ?</span>
+                    <button (click)="toggleFaq(svg_icon11,'eleven')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon11 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="eleven">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        La durée de l’accompagnement varie selon les besoins spécifiques de votre entreprise. Ce cadre permet un suivi
+                        efficace et une implémentation réussie des stratégies de développement.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Quand est-ce que j’aurai accès aux fonds pour mon entreprise ?</span>
+                    <button (click)="toggleFaq(svg_icon12,'twelve')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon12 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="twelve">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        L'accès aux fonds est prévu peu après l'acceptation de votre entreprise dans le programme et la finalisation
+                        de toutes les formalités administratives nécessaires. Ce processus inclut généralement une évaluation initiale
+                        de votre entreprise, suivie d'une période d'orientation avant que les fonds ne soient débloqués.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Qu’en est-il de mes données ? Seront-elles sécurisées ?</span>
+                    <button (click)="toggleFaq(svg_icon13,'thirteen')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon13 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="thirteen">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        La sécurité de vos données est une priorité absolue pour nous. Toutes les informations que vous partagez
+                        avec le programme sont strictement protégées et traitées avec la plus grande confidentialité. 
+                        Vos données sont sécurisées et accessibles uniquement aux personnes autorisées dans le cadre du programme.
+                    </p>
+                </div>
+            </div>
+            <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl lg:text-2xl font-sans font-semibold leading-7">Aurai-je accès à tous les services d’accompagnements en même temps ?</span>
+                    <button (click)="toggleFaq(svg_icon14,'fourteen')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon14 stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="fourteen">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        L'accès aux services d'accompagnement est généralement échelonné pour s'assurer qu'ils sont fournis de manière stratégique et bénéfique. Nous élaborons un plan personnalisé qui aligne l'accès aux services avec les phases de développement de votre entreprise, garantissant ainsi une intégration optimale et efficace.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

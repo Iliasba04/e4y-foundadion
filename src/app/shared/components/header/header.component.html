@@ -29,7 +29,7 @@
           <a [routerLink]="['/']" fragment="services" class="text-lg text-white font-normal nav-link" [class.active]="currentSection === 'services'">Services</a>
         </li>
         <li class="mx-4 lg:mx-6 my-6 md:my-0">
-          <a class="text-lg text-white font-normal nav-link">FAQ</a>
+          <a [routerLink]="['/faq']" routerLinkActive="active" class="text-lg text-white font-normal nav-link">FAQ</a>
         </li>
         <li class="mx-4 lg:mx-6 my-6 md:my-0">
           <a [routerLink]="['/']" fragment="contact" class="text-lg text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>

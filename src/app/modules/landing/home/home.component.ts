@@ -81,8 +81,6 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
     if(!section){
         return
     }
-    console.log(section);
-    
     this.section = section;
     document.getElementById(section)?.scrollIntoView({behavior:'smooth'});
   }
