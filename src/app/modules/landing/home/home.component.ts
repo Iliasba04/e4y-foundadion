@@ -4,13 +4,13 @@ import { HeaderComponent } from '../../../shared/components/header/header.compon
 import { Subscription, interval } from 'rxjs';
 import { CountdownComponent } from '../../../shared/components/countdown/countdown.component';
 import { FooterComponent } from '../../../shared/components/footer/footer.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { PricePipe } from '../../../shared/pipes/price.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent ,CountdownComponent, PricePipe],
+  imports: [CommonModule, HeaderComponent, FooterComponent ,CountdownComponent, PricePipe, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -23,6 +23,7 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
   public showScrollToTopButton = signal<boolean>(false)
 
   private activeRoute : ActivatedRoute = inject(ActivatedRoute);
+  constructor(private router: Router) {}
   section : string = '/';
   scrollHeight = signal(0);
   count: number = 0;
@@ -87,7 +88,9 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
 
   // Scroll to top
   scrollToTop(){
-    window.scrollTo(
+    this.updateUrl();
+    this.section ='hero';
+     window.scrollTo(
       {
           top: 0,
           behavior: 'smooth'
@@ -111,6 +114,11 @@ export class LandingHomeComponent implements OnInit, OnDestroy{
       this.section = 'hero';
     }
   }
+
+  updateUrl() {
+    this.router.navigate([]);
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
