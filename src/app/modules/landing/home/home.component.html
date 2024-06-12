@@ -3,7 +3,7 @@
     <!-- Page content-->
     <div class="w-full relative -z-10 md:z-auto">
         <!-- HERO SECTION -->
-        <section class="w-full min-h-screen bg-hero-background bg-no-repeat bg-cover" id="hero">
+        <section class="w-full min-h-screen bg-hero-background bg-no-repeat bg-cover xl:bg-center" id="hero">
             <div class="w-full min-h-[95dvh] px-5 lg:px-10 xl:px-20 flex flex-col justify-center md:justify-end">
                 <!-- COUNTDOWN -->
                 <div class="w-full flex flex-col items-center mb-5 md:hidden">
@@ -25,7 +25,7 @@
                          hover:bg-yellowColor hover:text-white duration-500">
                             <span class="text-md font-medium">JE M'INSCRIS</span>
                         </button>
-                        <button class="flex justify-center items-center px-5 py-2 bg-transparent border border-gray-100 rounded
+                        <a [routerLink]="['/faq']" routerLinkActive="router-link-active"  class="flex justify-center items-center px-5 py-2 bg-transparent border border-gray-100 rounded
                          hover:bg-yellowColor hover:border-yellowColor duration-500">
                             <span class="text-md text-white font-medium">EN SAVOIR</span>
                             <span class="text-xs text-white">
@@ -33,7 +33,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                   </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
         <!-- PROGRAMME SECTION -->
         <section class="w-full min-h-screen font-roboto_condensed" id="about">
             <div class="w-full min-h-screen">
-                <div class="w-full min-h-[90dvh] bg-cow-pattern bg-cover bg-no-repeat bg-center md:bg-opacity-100 px-5 lg:px-10 xl:px-20 relative">
+                <div class="w-full min-h-[90dvh] bg-cow-pattern bg-cover bg-no-repeat bg-position md:bg-opacity-100 px-5 lg:px-10 xl:px-20 relative">
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-18 xl:gap-x-24 bg-gray-300 bg-opacity-60 md:bg-transparent md:bg-opacity-100 px-1 py-10">
                         <div class="sm:col-span-2 h-fit">
                             <div class="flex items-center space-x-4 mb-5">
@@ -120,28 +120,28 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 sm:gap-5 lg:gap-20 xl:gap-30">
                     <div class="flex flex-col justify-start items-center p-2 group relative card-section">
-                        <div class="w-full rounded-[20px] mb-5">
+                        <div class="w-full rounded-[20px] mb-2">
                             <img class="w-full object-cover" src="../../../../assets/images/tracteur.png" alt="tracteur">
                         </div>
-                        <p class="text-lg xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-base xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                          group-hover:text-white group-hover:z-80 duration-500">
                             PME évoluant en milieu rural ou ayant un impact notable sur les <span class="font-bold">communautés</span> les moins desservies.
                         </p>
                     </div>
                     <div class="flex flex-col justify-start items-center p-2 group relative card-section">
-                        <div class="w-full rounded-[20px] mb-5">
+                        <div class="w-full rounded-[20px] mb-2">
                             <img class="w-full object-cover" src="../../../../assets/images/biere.png" alt="beer">
                         </div>
-                        <p class="text-lg xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-base xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                          group-hover:text-white group-hover:z-80 duration-500">
                             PME et Groupements actifs dans l’<span class="font-bold">industrie agroalimentaire</span> et les <span class="font-bold">secteurs connexes</span>.
                         </p>
                     </div>
                     <div class="flex flex-col justify-start items-center p-2 group relative card-section sm:col-span-2 md:col-span-1">
-                        <div class="w-full rounded-[20px] mb-5">
+                        <div class="w-full rounded-[20px] mb-2">
                             <img class="w-full object-cover sm:h-80 sm:rounded-[20px] md:rounded-none md:h-full" src="../../../../assets/images/girls.png" alt="couturier">
                         </div>
-                        <p class="text-lg xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
+                        <p class="text-base xl:text-2xl text-justify text-[#4D4F55] font-normal leading-8 px-6 
                         group-hover:text-white group-hover:z-80 duration-500">
                             Jeunes et Femmes présentant un potentiel élevé, y compris celles en <span class="font-bold">situation de handicap</span> ou <span class="font-bold">réfugiées</span>.
                         </p>
@@ -223,7 +223,7 @@
                         <p class="text-center text-[#1E1E1E] text-xl xl:text-[22px] font-normal leading-5 xl:leading-[35.2px]">
                             emplois directs <br>
                             et indirects, créés, <br> 
-                            consolidés ou maintenus.</p>
+                            consolidés ou maintenus</p>
                     </div>
                     <div class="flex flex-col justify-start items-center space-y-2">
                         <span class="text-center text-orangeColor text-4xl xl:text-6xl font-bold leading-10 xl:leading-[64px]">{{personsCount() | price}}</span>

@@ -1,3 +1,6 @@
+.bg-position{
+    background-position: 50% 50%;
+}
 .gradient-bg{
     background: linear-gradient(184.15deg, #DEE2ED 3.22%, #FFFFFF 96.78%);
 }
@@ -29,4 +32,14 @@
     height: 180px;
 
 }
-
+/* Styles for screens smaller than 600px */
+@media only screen and (min-width: 1280px) {
+    .bg-position{
+        background-position: 50% 35%;
+    }
+}
+@media only screen and (min-width: 960px) {
+    .bg-position{
+        background-position: 50% 40%;
+    }
+}
