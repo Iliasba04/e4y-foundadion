@@ -13,8 +13,8 @@
                     <app-countdown [scrollHeight]="scrollHeight()"/>  
                 </div>-->
                 <!-- TEXT -->
-                <div class="flex flex-col justify-center md:items-start font-roboto_condensed mb-32">
-                    <p class="text-white text-xl font-extralight text-left md:text-2xl lg:text-4xl xl:text-6xl md:leading-10">DÉVELOPPER<br> 
+                <div class="flex flex-col justify-center md:items-start font-roboto_condensed sm:mb-30">
+                    <p class="text-white text-3xl sm:text-4xl font-thin text-left md:text-5xl lg:text-6xl xl:text-7xl leading-10 xl:leading-[3.3rem]">DÉVELOPPER<br> 
                         L’<span class="font-semibold">ENTREPRENARIAT</span>, L’EMPLOI<br>
                         ET L’<span class="font-semibold">AUTONOMISATION</span> <br>
                         ÉCONOMIQUE DES <span class="font-semibold">JEUNES</span>
@@ -22,8 +22,12 @@
 
                     <div class="flex items-center flex-row space-x-5 mt-6">
                         <button class="flex items-center justify-center px-5 py-2 border border-white bg-white text-black rounded
-                         hover:bg-yellowColor hover:text-white duration-500">
+                         hover:bg-yellowColor hover:text-white duration-500 relative group">
                             <span class="text-md font-medium">JE M'INSCRIS</span>
+                            <div class="w-50 py-4 absolute top-10 z-50 bg-white text-black rounded-md shadow-sm scale-0 group-hover:scale-100
+                                transition-transform duration-300">
+                                <p class="font-roboto text-md text-center">Les inscrptions débuterons bientôt</p>
+                            </div>
                         </button>
                         <a [routerLink]="['/faq']" routerLinkActive="router-link-active"  class="flex justify-center items-center px-5 py-2 bg-transparent border border-gray-100 rounded
                          hover:bg-yellowColor hover:border-yellowColor duration-500">
