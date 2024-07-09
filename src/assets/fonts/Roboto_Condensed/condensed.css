@@ -6,3 +6,11 @@
     font-style: normal;
     src: url("RobotoCondensed-VariableFont_wght.ttf") format("ttf");
 }
+@font-face {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    font-display: swap;
+    font-optical-sizing: auto;
+    font-style: normal;
+    src: url("assets/fonts/Roboto_Condensed/static/RobotoCondensed-Thin.ttf") format("ttf");
+}
