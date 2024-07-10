@@ -4,7 +4,7 @@
     <div class="w-full relative z-auto">
         <!-- HERO SECTION -->
         <section class="w-full min-h-screen bg-hero-background bg-no-repeat bg-cover hero-bg-position sm:bg-right md:bg-center" id="hero">
-            <div class="w-full min-h-[95dvh] px-5 lg:px-10 xl:px-20 flex flex-col justify-center sm:justify-end">
+            <div class="w-full min-h-screen flex flex-col justify-center sm:justify-end mask-bg px-5 lg:px-10 xl:px-20 relative">
                 <!-- COUNTDOWN 
                 <div class="w-full flex flex-col items-center mb-5 md:hidden">
                     <div class="w-fit bg-yellowColor text-white px-10 py-2">
@@ -13,34 +13,35 @@
                     <app-countdown [scrollHeight]="scrollHeight()"/>  
                 </div>-->
                 <!-- TEXT -->
-                <div class="flex flex-col justify-center md:items-start font-roboto_condensed sm:mb-30">
-                    <p class="text-white text-3xl sm:text-4xl font-thin text-left md:text-5xl lg:text-6xl xl:text-7xl leading-10 xl:leading-[3.3rem]">DÉVELOPPER<br> 
-                        L’<span class="font-semibold">ENTREPRENARIAT</span>, L’EMPLOI<br>
-                        ET L’<span class="font-semibold">AUTONOMISATION</span> <br>
-                        ÉCONOMIQUE DES <span class="font-semibold">JEUNES</span>
-                    </p>
+                <div class="flex flex-col justify-center items-center sm:items-start font-roboto_condensed sm:mb-30 z-10">
+                        <p class="text-white text-3xl sm:text-4xl font-thin text-left md:text-5xl lg:text-6xl xl:text-7xl leading-10 xl:leading-[3.3rem]">DÉVELOPPER<br> 
+                            L’<span class="font-semibold">ENTREPRENEURIAT</span>, L’EMPLOI<br>
+                            ET L’<span class="font-semibold">AUTONOMISATION</span> <br>
+                            ÉCONOMIQUE DES <span class="font-semibold">JEUNES</span>
+                        </p>
 
-                    <div class="flex items-center flex-row space-x-5 mt-6">
-                        <button class="flex items-center justify-center px-5 py-2 border border-white bg-white text-black rounded
-                         hover:bg-yellowColor hover:text-white duration-500 relative group">
-                            <span class="text-md font-medium">JE M'INSCRIS</span>
-                            <div class="w-50 py-4 absolute top-10 z-50 bg-white text-black rounded-md shadow-sm scale-0 group-hover:scale-100
-                                transition-transform duration-300">
-                                <p class="font-roboto_condensed font-medium text-md text-center">
-                                    RESTERZ CONNECTÉS, INSCRIPTIONS IMMINENTES !</p>
-                            </div>
-                        </button>
-                        <a [routerLink]="['/faq']" routerLinkActive="router-link-active"  class="flex justify-center items-center px-5 py-2 bg-transparent border border-gray-100 rounded
-                         hover:bg-yellowColor hover:border-yellowColor duration-500">
-                            <span class="text-md text-white font-medium">EN SAVOIR</span>
-                            <span class="text-xs text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                  </svg>
-                            </span>
-                        </a>
-                    </div>
+                        <div class="flex items-center flex-row space-x-5 mt-6">
+                            <button class="flex items-center justify-center px-5 py-2 border border-white bg-white text-black rounded
+                            hover:bg-yellowColor hover:text-white duration-500 relative group">
+                                <span class="text-md font-medium">JE M'INSCRIS</span>
+                                <div class="w-50 py-4 absolute top-10 z-50 bg-white text-black rounded-md shadow-sm scale-0 group-hover:scale-100
+                                    transition-transform duration-300">
+                                    <p class="font-roboto_condensed font-medium text-md text-center">
+                                        RESTEZ CONNECTÉS, INSCRIPTIONS IMMINENTES !</p>
+                                </div>
+                            </button>
+                            <a [routerLink]="['/faq']" routerLinkActive="router-link-active"  class="flex justify-center items-center px-5 py-2 bg-transparent border border-gray-100 rounded
+                            hover:bg-yellowColor hover:border-yellowColor duration-500">
+                                <span class="text-md text-white font-medium">EN SAVOIR</span>
+                                <span class="text-xs text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                 </div>
+                
             </div>
         </section>
         <!-- PROGRAMME SECTION -->
@@ -56,14 +57,14 @@
                             <p class="text-base xl:text-xl text-justify text-black leading-6 font-normal lg:w-4/5 xl:w-full">
                                 <span class="font-bold">E4Y «Développement de l’Entrepreneuriat, Accès à l’emploi et Autonomisation
                                     économique des Jeunes en particulier les Jeunes Femmes », </span>
-                                est un Programme visant à transformer le paysage économique des pays de la zone (UEMOA) notamment le <span class="font-bold">Sénégal</span>,
+                                est un Programme visant à transformer le paysage économique des pays de la zone UEMOA notamment le <span class="font-bold">Sénégal</span>,
                                 la <span class="font-bold">Côte d'Ivoire</span>, le <span class="font-bold">Bénin</span> et le <span class="font-bold">Togo</span>.
                                 Ce programme cible principalement les petites et moyennes entreprises (PME) évoluant dans l’agrobusiness, l’agroindustrie et secteurs
                                 adjacents ainsi que les Groupements à fort potentiel.
                             </p>
 
                             <p class="text-base xl:text-xl text-justify text-black leading-6 font-normal mt-2 lg:w-4/5 xl:w-full">
-                                Avec un focus Jeune, notamment Jeunes Femmes, E4Y se concentre sur l'épanouissement de leur capacités entrepreneuriale et 
+                                Avec un focus Jeune, notamment Jeunes Femmes, E4Y se concentre sur l'épanouissement de leurs capacités entrepreneuriales et 
                                 l'amélioration de leur compétitivité sur le marché.
                             </p>
                         </div>
@@ -94,7 +95,7 @@
                                     </div>
                                     <p class="text-white font-normal leading-8 text-justify text-lg lg:text-xl xl:text-2xl">
                                         <span class="font-bold leading-5 text-xl xl:text-3xl">Créer de l’Impact</span><br>
-                                        Contribuer à libérer le potentiel des PME évoluant dans l’industrie agroalimentaire et les secteurs connexes.
+                                        Contribuer à développer le potentiel des PME évoluant dans l’industrie agroalimentaire et les secteurs connexes.
                                     </p>
                                 </div>
 
@@ -117,7 +118,7 @@
         </section>
 
         <!-- CIBLE SECTION -->
-        <section class="w-full font-roboto_condensed" id="services">
+        <section class="w-full font-roboto_condensed">
             <div class="w-full flex flex-col px-5 lg:px-10 xl:px-20 py-20 bg-white mt-5">
                 <div class="flex items-center space-x-4 mb-5">
                     <span class="block w-22 h-[2px] bg-[#1D2130]"></span>
@@ -153,12 +154,12 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full px-5 lg:px-10 xl:px-20 py-20 bg-[#1E1E1E]">
+            <div class="w-full px-5 lg:px-10 xl:px-20 py-20 bg-[#1E1E1E]" id="services">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="flex justify-start items-center">
                         <div class="flex items-center space-x-4 mb-5">
                             <span class="block w-22 h-[2px] bg-white"></span>
-                            <span class="text-base xl:text-2xl font-bold leading-5 xl:leading-6 tracking-[2px] text-white">CRITÈRES DE SÉLECTION</span>
+                            <span class="text-base xl:text-2xl font-bold leading-5 xl:leading-6 tracking-[2px] text-white">CRITÈRES D'ÉLIGIBILITÉ</span>
                         </div>
                     </div>
                     <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -259,9 +260,16 @@
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow transition-all
                     duration-500">
                         <span class="text-lg text-black text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AU FINANCEMENT</span>
-                        <h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 xl:leading-[42px] font-bold mb-3">Teranga Gestion</h3>
+                        <div class="flex flex-col items-center mb-5">
+                            <!--<h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 xl:leading-[42px] font-bold mb-3">
+                                <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://www.terangacapital.com">Teranga Gestion</a>
+                            </h3>-->
+                            <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://www.terangacapital.com">
+                                <img src="assets/images/Logo_Teranga.png" alt="logo_teranga_gestion" class="w-28">
+                            </a>
+                        </div>
                         <p class="text-base xl:text-xl text-black text-justify leading-7 xl:leading-[30.4px] font-normal">
-                            Teranga Gestion (TG) est une société de gestion de fonds d’impact établie au Sénégal depuis 2016.
+                            <a class="hover:text-blue-500 hover:underline" target="_blank" href="https://www.terangacapital.com">Teranga Gestion</a> (TG) est une société de gestion de fonds d’impact établie au Sénégal depuis 2016.
                             Sa mission est de favoriser l'<span class="font-bold">accès au financement</span> des micro, petites et moyennes entreprises (PME) africaines,
                             en améliorant leurs performances et leurs impacts économiques et sociaux. Teranga Gestion collabore 
                             avec les PME pour assouplir les <span class="font-bold">conditions de prêt</span> auprès des institutions financières partenaires.
@@ -272,11 +280,18 @@
                     </div>
 
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow">
-                        <span class="text-lg text-black text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AU COMPETENCES</span>
-                        <h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 xl:leading-[42px] font-bold mb-3">Entrepreneurial Solutions <br>
-                            Partners</h3>
+                        <span class="text-lg text-black text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AUX COMPÉTENCES</span>
+                        <div class="flex flex-col items-center mb-5">
+                            <!--<h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 font-bold mb-3">
+                            <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://espartners.co/">Entrepreneurial Solutions <br>
+                                Partners</a>
+                            </h3>-->
+                            <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://espartners.co/">
+                                <img src="assets/images/ESP_LOGO.png" alt="logo_esp" class="w-22">
+                            </a>
+                        </div>
                         <p class="text-base xl:text-xl text-black text-justify leading-7 xl:leading-[30.4px] font-normal">
-                            Entrepreneurial Solutions Partners (ESP), une société de conseil et d'<span class="font-bold">investissement stratégique</span> implantée à Abidjan et à Kigali,
+                            <a class="hover:text-blue-500 hover:underline" target="_blank" href="https://espartners.co/">Entrepreneurial Solutions Partners (ESP)</a>, une société de conseil et d'<span class="font-bold">investissement stratégique</span> implantée à Abidjan et à Kigali,
                             fournit les éléments clés d'une réussite durable aux entrepreneurs africains grâce à son concept de <span class="font-bold">Capital Intelligent</span>.
                             ESP soutient les entrepreneurs en leur offrant des programmes de formation qui couvrant un large éventail de compétences managériales,
                             techniques et commerciales.
@@ -286,10 +301,17 @@
                     </div>
 
                     <div class="flex flex-col items-center border border-[#E8620F] rounded-[46px] bg-[#FFFFFF] p-6 card-shadow">
-                        <span class="text-lg text-black text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCES AUX MARCHES</span>
-                        <h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 xl:leading-[42px] font-bold mb-3">Club Tiossane</h3>
+                        <span class="text-lg text-black text-center tracking-[2px] leading-[18.75px] font-bold mb-5">ACCÈS AU MARCHÉ</span>
+                        <div class="flex flex-col items-center mb-5">
+                            <!--<h3 class="text-xl xl:text-3xl text-[#E8620F] text-center leading-9 xl:leading-[42px] font-bold mb-3">
+                                <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://www.clubtiossane.sn">Club Tiossane</a>
+                            </h3>-->
+                            <a class="hover:text-blue-400 hover:underline" target="_blank" href="https://www.clubtiossane.sn">
+                                <img src="assets/images/CLUB_THIOSSANE.png" alt="logo_club_thiossane" class="w-28">
+                            </a>
+                        </div>
                         <p class="text-base xl:text-xl text-black text-justify leading-7 xl:leading-[30.4px] font-normal">
-                            Club Tiossane, basé à Dakar, Sénégal, est un distributeur multicanal de produits agroalimentaires. Son objectif principal
+                            <a class="hover:text-blue-500 hover:underline" target="_blank" href="https://www.clubtiossane.sn">Club Tiossane</a>, basé à Dakar, Sénégal, est un distributeur multicanal de produits agroalimentaires. Son objectif principal
                             est de faciliter l'accès au marché pour les PME et les jeunes entrepreneurs en identifiant les <span class="font-bold">canaux de distribution</span> adaptés
                             à leurs produits.
                             L’ entreprise offre une gamme de services comprenant la distribution physique, le référencement, la négociation des conditions 

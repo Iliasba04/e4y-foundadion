@@ -4,6 +4,20 @@
 .hero-bg{
     background-position: 50% 60%;
 }
+.mask-bg{
+    background: transparent;
+}
+.mask-bg::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 65%;
+    //background: red;
+    background: linear-gradient(270deg, rgba(217, 217, 217, 0.07) 0%, #8A9FB7 100%);
+    //z-index: -1;
+}
 .gradient-bg{
     background: linear-gradient(184.15deg, #DEE2ED 3.22%, #FFFFFF 96.78%);
 }
