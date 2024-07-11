@@ -9,18 +9,13 @@ import { Pipe, PipeTransform } from "@angular/core";
   })
   export class PricePipe implements PipeTransform {
   
-    transform(value: number, locale: string = 'de-DE'): unknown {
-      return this.convertToLocalString(value, locale);
+    transform(value: number): unknown {
+      const nbr = value.toString();
+      return this.convertToLocalString(nbr);
     }
   
-    convertToLocalString(nStr: number, locale:string) {
-      /**if (nStr === '' || !nStr) return '0';
-      return Number(nStr).toLocaleString('fr');*/
-        if (nStr === null || nStr === undefined) {
-          return '';
-        }
-    
-        return new Intl.NumberFormat(locale).format(nStr);
-      
+    convertToLocalString(nStr: string) {
+      if (nStr === '' || !nStr) return '0';
+      return Number(nStr).toLocaleString('fr');
     }
 }
