@@ -293,6 +293,25 @@
                     </p>
                 </div>
             </div>
+             <!-- NEW -->
+             <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
+                <div class="w-full flex justify-between items-center">
+                    <span class="text-base sm:text-xl xl:text-2xl font-sans font-semibold leading-7">Quel est la durée du Programme ?</span>
+                    <button (click)="toggleFaq(svg_icon1,'duration')">
+                        <span class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6">
+                                <path #svg_icon1  stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="w-full h-0 overflow-hidden trans" id="duration">
+                    <p class="text-base md:text-lg text-[#5E5E5E] font-sans font-normal leading-[24px] mt-3">
+                        Le Programme E4Y dure six ans ( 2024 - 2029).
+                    </p>
+                </div>
+            </div>
+            <!-- END -->
             <div class="w-full flex flex-col dropdown py-6 transition-all duration-500">
                 <div class="w-full flex justify-between items-center">
                     <span class="text-base sm:text-xl xl:text-2xl font-sans font-semibold leading-7">Quelle est la durée de l’accompagnement ?</span>
