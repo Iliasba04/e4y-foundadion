@@ -30,7 +30,7 @@ module.exports = {
         extend  : {
             backgroundImage : {
               'hero-pattern': "url('/assets/images/hero_background.png')",
-              'hero-background': "url('/assets/images/HERO-BG.jpg')",
+              'hero-background': "url('/assets/images/hero-fisher-women.png')",
               'cow-pattern': "url('/assets/images/cow.png')",
               'cta-pattern':"url('/assets/images/CTA.png')",
               'result-pattern':"url('/assets/images/result-bg.png')",
