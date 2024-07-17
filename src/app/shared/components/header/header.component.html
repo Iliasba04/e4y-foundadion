@@ -36,12 +36,20 @@
             <a [routerLink]="['/']" fragment="contact" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>
           </li>
         
+          <li>
+            <a href="https://e4y-test.acceleratorapp.co/login" target="_blank"
+              class="w-fit bg-[#F59E21] text-white px-10 py-2 md:hidden flex flex-col justify-center items-center rounded
+              hover:bg-[#f66c18] transition-colors duration-300">
+                <span>Se connecter</span>
+            </a>
+          </li>
           <!--<div class="w-fit bg-yellowColor text-white px-10 py-1 flex-col justify-center items-center mx-4 xl:mx-6 hidden md:flex ">
               <span class="text-sm font-semibold">LANCEMENT DU SITE WEB</span>
               <app-countdown/>
           </div>-->
       </ul>
-      <a href="https://e4y-test.acceleratorapp.co/login" target="_blank" class="w-fit bg-[#F59E21] text-white px-10 py-2 flex flex-col justify-center items-center rounded
+      <a href="https://e4y-test.acceleratorapp.co/login" target="_blank"
+       class="w-fit bg-[#F59E21] text-white px-10 py-2 hidden md:flex flex-col justify-center items-center rounded
        hover:bg-[#f66c18] transition-colors duration-300">
         <span>Se connecter</span>
       </a>
