@@ -20,19 +20,37 @@
           bg-[#1E1E1E] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0
           top-[-400px] transition-all ease-in-out duration-500"
           [ngClass]="{'opacity-100 top-[63px]' : toggled() , }">
-          <li class="mx-6 my-6 md:my-0">
-              <a [routerLink]="['/']" fragment="hero" class="text-base text-white font-normal nav-link" [class.active]="currentSection === '/' || currentSection ==='hero'">Accueil</a>
+          <!-- FLEX LI -->
+          <li class="mx-6 my-6 md:my-0 hidden md:block">
+            <a [routerLink]="['/']" fragment="hero" class="text-base text-white font-normal nav-link" [class.active]="currentSection === '/' || currentSection ==='hero'">Accueil</a>
           </li>
-          <li class="mx-6 my-6 md:my-0">
+          <li class="mx-6 my-6 md:my-0 hidden md:block">
             <a [routerLink]="['/']" fragment="about" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'about'">À propos</a>
           </li>
-          <li class="mx-6 my-6 md:my-0">
+          <li class="mx-6 my-6 md:my-0 hidden md:block">
             <a [routerLink]="['/']" fragment="services" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'services'">Éligibilité</a>
           </li>
-          <li class="mx-6 my-6 md:my-0">
+          <li class="mx-6 my-6 md:my-0 hidden md:block">
             <a [routerLink]="['/faq']" routerLinkActive="active" class="text-base text-white font-normal nav-link">FAQ</a>
           </li>
-          <li class="mx-6 my-6 md:my-0">
+          <li class="mx-6 my-6 md:my-0 hidden md:block">
+            <a [routerLink]="['/']" fragment="contact" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>
+          </li>
+
+          <!-- HIDDEN LI -->
+          <li class="mx-6 my-6 md:my-0 block md:hidden" (click)="toggle()">
+              <a [routerLink]="['/']" fragment="hero" class="text-base text-white font-normal nav-link" [class.active]="currentSection === '/' || currentSection ==='hero'">Accueil</a>
+          </li>
+          <li class="mx-6 my-6 md:my-0 block md:hidden" (click)="toggle()">
+            <a [routerLink]="['/']" fragment="about" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'about'">À propos</a>
+          </li>
+          <li class="mx-6 my-6 md:my-0 block md:hidden" (click)="toggle()">
+            <a [routerLink]="['/']" fragment="services" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'services'">Éligibilité</a>
+          </li>
+          <li class="mx-6 my-6 md:my-0 block md:hidden" (click)="toggle()">
+            <a [routerLink]="['/faq']" routerLinkActive="active" class="text-base text-white font-normal nav-link">FAQ</a>
+          </li>
+          <li class="mx-6 my-6 md:my-0 block md:hidden" (click)="toggle()">
             <a [routerLink]="['/']" fragment="contact" class="text-base text-white font-normal nav-link" [class.active]="currentSection === 'contact'" >Contacts</a>
           </li>
         
