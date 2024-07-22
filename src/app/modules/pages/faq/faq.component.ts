@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { RouterLink } from '@angular/router';
+import { ScrollService } from '../../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-faq',
@@ -50,6 +51,7 @@ export class FaqComponent {
     }
   ]
 
+  constructor(private scrollService: ScrollService){}
   toggleFaq(event:any,id:string){
     // Trouver l'élément associé au bouton cliqué
     const icon : HTMLElement =  event;
