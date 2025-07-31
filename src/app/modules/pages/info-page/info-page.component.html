@@ -1,69 +1,73 @@
-<div class="w-full min-h-screen bg-white flex flex-col justify-center items-center p-5">
-    <!-- responsive div -->
-     <div class="bg-[#27746b] w-full h-full flex-1 flex flex-col justify-center items-center p-5">
-        <div class="mb-5">
-            <a>
-                <img class="h-20 inline" src="assets/images/Logo_E4Y.png" alt="company logo">
-            </a>
-       </div>
-        <div class="flex flex-row space-x-2 items-center">
-            <span class="w-20 border border-white"></span>
-            <span class="text-4xl text-white font-roboto font-bold">REDIRECTION EN COURS</span>
-        </div>
-        <div class="flex flex-col items-center mt-5 font-roboto w-[33rem]">
-            <p class=" text-white text-xl italic">
-                Merci de votre visite !
-            </p>
-            <div class="flex flex-col mt-5 w-full">
-                <p class="text-2xl text-white font-normal font-roboto leading-7">
-                    Vous avez été redirigé depuis notre ancienne page. <br>
-                    Notre site officiel est désormais accessible à l'adresse suivante :
+    <div class="w-full min-h-screen bg-white flex flex-col justify-center items-center p-3 sm:p-5">
+        <div class="bg-[#27746b] w-full h-full flex-1 flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8">
+            <!-- Logo -->
+            <div class="mb-6 sm:mb-8">
+                <a>
+                    <img class="h-16 sm:h-20 lg:h-24 inline" src="assets/images/Logo_E4Y.png" alt="company logo">
+                </a>
+            </div>
+            
+            <!-- Titre avec ligne -->
+            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 items-center mb-6 sm:mb-8">
+                <span class="w-12 sm:w-20 border border-white"></span>
+                <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-roboto font-bold text-center px-2">
+                    REDIRECTION EN COURS
+                </span>
+                <span class="hidden sm:block w-12 sm:w-20 border border-white"></span>
+            </div>
+            
+            <!-- Contenu principal -->
+            <div class="flex flex-col items-center font-roboto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl px-4">
+                <!-- Message de remerciement -->
+                <p class="text-white text-lg sm:text-xl lg:text-2xl italic text-center mb-6">
+                    Merci de votre visite !
+                </p>
+                
+                <!-- Message principal -->
+                <div class="flex flex-col w-full space-y-4 sm:space-y-6">
+                    <p class="text-lg sm:text-xl lg:text-2xl text-white font-normal font-roboto leading-6 sm:leading-7 text-center">
+                        Vous avez été redirigé depuis notre ancienne page.<br class="hidden sm:block">
+                        <span class="block sm:inline"> Notre site officiel est désormais accessible à l'adresse suivante :</span>
+                    </p>
                     
-                </p>
-                <span class="flex items-center space-x-3 justify-center bg-white p-2 rounded-lg mt-5">
-                        <span style="font-size: 24px;">👉 :</span>
-                        <a href="https://www.e4y-program.com" class="text-[#ca6226] underline text-3xl hover:text-blue-600">e4y-program.com</a>.
+                    <!-- Lien principal -->
+                    <span class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 justify-center bg-white p-3 sm:p-4 rounded-lg">
+                        <span class="text-xl sm:text-2xl">👉</span>
+                        <a href="https://www.e4y-program.com" class="text-[#ca6226] underline text-xl sm:text-2xl lg:text-3xl hover:text-blue-600 break-all sm:break-normal">
+                            www.e4y-program.com
+                        </a>
                     </span>
-                <p class="text-2xl text-white mt-5 leading-6">
-                    <span style="color: white; font-size: 24px;">🔔</span>
-                    Ici, nous souhaitons vous offrir une place spéciale à nos champions, celles et ceux qui font battre le cœur du programme !
-                </p>
+                    
+                    <!-- Message avec cloche -->
+                    <p class="text-lg sm:text-xl lg:text-2xl text-white leading-5 sm:leading-6 text-center">
+                        <span class="text-xl sm:text-2xl">🔔</span>
+                        <span class="block sm:inline"> Ici, nous souhaitons offrir une place spéciale à nos champions, celles et ceux qui font battre le cœur du programme !</span>
+                    </p>
+                </div>
+                
+                <!-- Contact -->
+                <div class="flex flex-col items-center mt-6 sm:mt-8 text-white text-center space-y-3 sm:space-y-4">
+                    <p class="text-lg sm:text-xl lg:text-2xl">Pour toute demande, vous pouvez nous contacter à :</p>
+                    
+                    <!-- Emails -->
+                    <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                        <p class="font-bold text-base sm:text-lg lg:text-xl">
+                            <a href="mailto:info@e4y-program.com" class="hover:underline break-all sm:break-normal">Info&#64;e4y-program.com</a>
+                        </p>
+                        <span class="hidden sm:inline text-white">-</span>
+                        <p class="font-bold text-base sm:text-lg lg:text-xl">
+                            <a href="mailto:contact@e4y-program.com" class="hover:underline break-all sm:break-normal">Contact&#64;e4y-program.com</a>
+                        </p>
+                    </div>
+                    
+                    <!-- Téléphone -->
+                    <p class="font-bold text-lg sm:text-xl">
+                        <a href="tel:+221338256999" class="hover:underline">+221 33 825 69 99</a>
+                    </p>
+                    
+                    <!-- Message final -->
+                    <p class="text-lg sm:text-xl italic mt-4">Restez connectés !</p>
+                </div>
             </div>
-            <div class="flex flex-col items-center mt-5 text-white">
-                <p class="text-2xl">Pour toute demande vous pouvez nous contacter à :</p>
-                <p class="font-bold text-xl"><a>info&#64;e4y-program.com - contact&#64;e4y-program.com</a></p>
-                <p class="font-bold text-xl"><a href="tel:+221338256999">+221 33 825 69 99</a></p>
-                <p class="text-xl italic mt-4">Restez connectés !</p>
-            </div>
-
         </div>
-     </div>
-
-    <!--<div class="mb-5">
-        <a>
-            <img class="h-20 inline" src="assets/images/Logo_E4Y.png" alt="company logo">
-        </a>
     </div>
-
-    <div class="maintenance-container">
-        <div class="maintenance-icon">🔧</div>
-        
-        <h1 class="font-bold text-3xl mb-5">REDIRECTION EN COURS</h1> 
-        
-        <p class="subtitle">
-            Merci de votre visite !
-        </p>
-        <p class="subtitle">
-            Vous avez été redirigé depuis notre ancienne page. <br>
-            Notre site officiel est désormais accessible à l'adresse suivante
-             <span class="flex bg-white p-2">
-                <a href="https://www.e4y-program.com" class="text-blue-600 underline">e4y-program.com</a>.
-             </span>
-        </p>
-        <div class="contact-info">
-            <p>Pour toute demande vous pouvez nous contacter à :</p>
-            <p class="text-zinc-800 font-bold text-lg"><a>info&#64;e4y-program.com - contact&#64;e4y-program.com</a></p>
-            <p class="text-zinc-800 font-bold text-lg"><a href="tel:+221338256999">+221 33 825 69 99</a></p>
-            <p class="text-xl mt-2">Restez connectés !</p>
-        </div>-->
-</div>
